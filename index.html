@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be My Valentine</title>
+  <style>
+    body {
+      background-color: pink;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+    #container {
+      text-align: center;
+      color: white;
+    }
+    .popup {
+      font-size: 1.5rem;
+      background: rgba(255, 255, 255, 0.9);
+      color: #d63384;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px;
+      display: none;
+    }
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="popup" id="popup1">Doctor, I have a case for you to consult on. 🩺</div>
+    <div class="popup" id="popup2">Patient shows symptoms of an accelerated heart rate, constant thoughts about you, and an intense desire for February 14th. 💕</div>
+    <div class="popup" id="popup3">Diagnosis: Lovesickness. ❤️</div>
+    <div class="popup" id="popup4">Prescription: You as my Valentine. Will you accept this case? 🥰</div>
+    <button onclick="showNextPopup()">Click Here</button>
+  </div>
+
+  <script>
+    const popups = document.querySelectorAll('.popup');
+    let currentPopup = 0;
+
+    function showNextPopup() {
+      if (currentPopup < popups.length) {
+        popups[currentPopup].style.display = 'block';
+        currentPopup++;
+      } else {
+        alert("Happy Valentine's Day! 💖");
+      }
+    }
+  </script>
+</body>
+</html>
